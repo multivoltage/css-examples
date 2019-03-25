@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: ". . ." ". . ." ". . .";
+    height: 100%;
+    transition: .6s;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+}
+
+.background {
+    background-image: url('https://cdn.vox-cdn.com/uploads/chorus_image/image/57894871/Elysee_Miami__1_.0.jpg');
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: 100vw auto;
+    transition: transform .6s;
+
+}
+
+.cell {
+    width: 33.33vw;
+    height: 33.33vh;
+    box-sizing: border-box;
+    /* margin: 10px; */
+    transition: zoom .5s;
+}
+
+
+
+.background01 {
+    background-position: -33.33vw 0;
+}
+.background02 {
+    background-position: -66.66vw 0;
+}
+
+/* second row */
+.background10 {
+    background-position: 0 -33.33vh;
+}
+.background11 {
+    background-position: -33.33vw -33.33vh;
+}
+.background12 {
+    background-position: -66.66vw -33.33vh;
+}
+
+/* thrid line */
+.background20 {
+    background-position: 0 -66.66vh;
+}
+.background21 {
+    background-position: -33.33vw -66.66vh;
+}
+.background22 {
+    background-position: -66.66vw -66.66vh;
+}
+
+/* .cell:hover .background {
+    /* transform: scaleX(1.6) scaleY(1.6); 
+} */
+
+/*.cell:hover {
+    transform: translateZ(-100px);
+    
+}*/
+.cell:hover .background {
+    zoom: 140%;
+}
